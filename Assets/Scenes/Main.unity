@@ -294,7 +294,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &915036944
+--- !u!1001 &1921125763
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -304,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 1983476524787220505, guid: 99610181d08aee74db4e8c396bdb90e2,
         type: 3}
       propertyPath: m_Name
-      value: SocketIOHelper
+      value: SocketIOService
       objectReference: {fileID: 0}
     - target: {fileID: 7179353621327872223, guid: 99610181d08aee74db4e8c396bdb90e2,
         type: 3}
@@ -360,6 +360,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352121170358221446, guid: 99610181d08aee74db4e8c396bdb90e2,
+        type: 3}
+      propertyPath: list.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352121170358221446, guid: 99610181d08aee74db4e8c396bdb90e2,
+        type: 3}
+      propertyPath: list.Array.data[0].socket.info.protocol
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352121170358221446, guid: 99610181d08aee74db4e8c396bdb90e2,
+        type: 3}
+      propertyPath: list.Array.data[0].socket.info.domainName
+      value: xcx.test.tongchuanggame.com
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352121170358221446, guid: 99610181d08aee74db4e8c396bdb90e2,
+        type: 3}
+      propertyPath: list.Array.data[0].socket.info.port
+      value: 2020
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352121170358221446, guid: 99610181d08aee74db4e8c396bdb90e2,
+        type: 3}
+      propertyPath: list.Array.data[1].name
+      value: Test2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352121170358221446, guid: 99610181d08aee74db4e8c396bdb90e2,
+        type: 3}
+      propertyPath: list.Array.data[1].socket.info.protocol
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352121170358221446, guid: 99610181d08aee74db4e8c396bdb90e2,
+        type: 3}
+      propertyPath: list.Array.data[1].socket.info.domainName
+      value: xcx.tongchuanggame.com
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352121170358221446, guid: 99610181d08aee74db4e8c396bdb90e2,
+        type: 3}
+      propertyPath: list.Array.data[1].socket.info.port
+      value: 2020
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352121170358221446, guid: 99610181d08aee74db4e8c396bdb90e2,
+        type: 3}
+      propertyPath: list.Array.data[0].name
+      value: Test1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99610181d08aee74db4e8c396bdb90e2, type: 3}

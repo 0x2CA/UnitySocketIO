@@ -56,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\SocketIO\Script\SocketIOHelper.cs" />
+     <Compile Include="Assets\SocketIO\Script\SocketIOInfo.cs" />
+     <Compile Include="Assets\SocketIO\Script\SocketIOList.cs" />
+     <Compile Include="Assets\SocketIO\Script\SocketIOService.cs" />
      <None Include="Assets\SocketIO\Plugin\Newtonsoft.Json.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>E:/Unity/UnitySocketIO/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

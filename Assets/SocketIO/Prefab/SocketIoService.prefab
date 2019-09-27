@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7179353621327872223}
-  - component: {fileID: 5991755094815806769}
+  - component: {fileID: 5352121170358221446}
   m_Layer: 0
-  m_Name: SocketIOHelper
+  m_Name: SocketIoService
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5991755094815806769
+--- !u!114 &5352121170358221446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,9 +40,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1983476524787220505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10a1d02ff5a5d4243af52d37031deee9, type: 3}
+  m_Script: {fileID: 11500000, guid: b09c3d08670f5eb469e20100977fecd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  protocol: 2
-  domainName: 127.0.0.1
-  port: 80
+  list:
+  - name: Test
+    socket:
+      info:
+        protocol: 2
+        domainName: 127.0.0.1
+        port: 80
