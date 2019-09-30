@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using SocketIO;
 using UnityEngine;
 
 public class SocketIOService : MonoBehaviour {
@@ -17,25 +18,13 @@ public class SocketIOService : MonoBehaviour {
         if (_instance == null) {
             _instance = this;
             DontDestroyOnLoad (gameObject);
+            initialize ();
         } else {
             Destroy (gameObject);
         }
     }
 
-    private void Start () {
-        initialize ();
-        SocketIOHelper Test1 = getSocketHelper ("Test1");
-        if (Test1 != null) {
-            Debug.Log ("存在:" + Test1.info.url + "  状态:" + Test1.getStatus ());
-            Test1.connectAsync ().Wait ();
-
-            Debug.Log ("已经连接" + "  状态:" + Test1.getStatus ());
-            Test1.On ("test", delegate (SocketIOClient.Arguments.ResponseArgs args) {
-                Debug.Log (args.Text);
-            });
-            Test1.EmitAsync ("test", Test1);
-        }
-    }
+    private void Start () { }
 
     public void initialize () {
         foreach (SocketIOList item in list) {
