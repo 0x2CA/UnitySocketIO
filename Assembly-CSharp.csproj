@@ -54,17 +54,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\Test.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\CallbackEventHandler.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\GeneralEventHandlers.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\IO.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\IOData.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\IOEvent.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\IOPacket.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\IOPayload.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\IOProtocol.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\IOState.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\OpenArgs.cs" />
-     <Compile Include="Assets\SocketIO\Script\IO\StockEventHandler.cs" />
      <Compile Include="Assets\SocketIO\Script\SocketIOHelper.cs" />
      <Compile Include="Assets\SocketIO\Script\SocketIOInfo.cs" />
      <Compile Include="Assets\SocketIO\Script\SocketIOList.cs" />
@@ -273,6 +262,9 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>D:/Unity3D/2019.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="SocketIO">
+ <HintPath>E:/Unity/UnitySocketIO/Assets/SocketIO/Plugin/SocketIO.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>E:/Unity/UnitySocketIO/Assets/SocketIO/Plugin/Newtonsoft.Json.dll</HintPath>
