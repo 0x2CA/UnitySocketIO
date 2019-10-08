@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using SocketIO.SocketEvent;
 using UnityEngine;
 
 namespace SocketIO {
@@ -47,11 +48,11 @@ namespace SocketIO {
                 /**
                  * 监控 
                  **/
-                socket.on (IOEvent.CLOSE, () => {
+                socket.on (SocketStockEvent.Close, () => {
                     status = SocketIOState.CLOSED;
                     Debug.Log ("Socket Closed");
                 });
-                socket.on (IOEvent.CONNECT, () => {
+                socket.on (SocketStockEvent.Connect, () => {
                     status = SocketIOState.CONNECTED;
                     Debug.Log ("Socket Connected");
                 });
@@ -79,7 +80,7 @@ namespace SocketIO {
             }, _tokenSource.Token);
 
         }
-        public async Task closeAsync () {
+        public async Task CloseAsync () {
             if (socket != null) {
                 if (status == SocketIOState.CONNECTED && status != SocketIOState.CLOSEING) {
                     try {
@@ -96,7 +97,7 @@ namespace SocketIO {
             }
         }
 
-        public async Task reConnectAsync () {
+        public async Task ReConnectAsync () {
             if (status != SocketIOState.CONNECTED) {
                 for (int i = 0; i < 3; i++) {
                     try {
@@ -111,12 +112,12 @@ namespace SocketIO {
             }
         }
 
-        public void On (string eventName, GeneralEventHandlers callback) {
+        public void On (string eventName, GeneralEventHandler callback) {
             if (socket != null) {
                 socket.on (eventName, callback);
             }
         }
-        public void On (IOEvent eventName, StockEventHandlers callback) {
+        public void On (SocketStockEvent eventName, StockEventHandler callback) {
             if (socket != null) {
                 socket.on (eventName, callback);
             }
@@ -136,7 +137,7 @@ namespace SocketIO {
             });
         }
 
-        public Task EmitAsync (string eventName, object obj, GeneralEventHandlers callback) {
+        public Task EmitAsync (string eventName, object obj, ClientCallbackEventHandler callback) {
             return Task.Run (() => {
                 if (status == SocketIOState.CONNECTED) {
                     Debug.Log ("Socket EmitAsync:" + eventName + " " + obj);

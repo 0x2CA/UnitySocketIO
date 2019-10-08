@@ -28,28 +28,16 @@ public class Test : MonoBehaviour {
     private void OnGUI () {
         if (GUI.Button (new Rect (0, 0, 200, 100), "Socket send 测试!")) {
             if (Test1 != null) {
-                Test1.EmitAsync ("test", "12345", (result, callback) => {
+                Test1.EmitAsync ("test", "12345", (result) => {
                     Debug.Log ("运程调用:" + result);
                 });
             }
         }
     }
 
-    // private void Start () {
-    // IO a = new IO ("https://xcx.test.tongchuanggame.com:2020");
-    // a.connect ();
+    // private void Awake () {
 
-    // a.on ("test", (result, callback) => {
-    //     callback("你好");
-    //     Debug.Log (result);
-    // });
-
-    // a.on (IOEvent.CONNECT, () => {
-    //     a.emit ("test", "123456", (result, callback) => {
-    //         Debug.Log ("callback" + result);
-    //     });
-
-    // });
+    
 
     // }
 
